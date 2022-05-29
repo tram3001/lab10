@@ -16,8 +16,8 @@ app.use('/api/account', account)
 app.use('/api/products', product)
 app.use('/api/orders', order)
 
-app.listen(8080, () => {
-    console.log("http://localhost:8080")
-})
-
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
 mongodb.connect()
